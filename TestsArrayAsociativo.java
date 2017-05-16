@@ -65,7 +65,17 @@ public class TestsArrayAsociativo {
 		aa = new ArrayAsociativo();
 		aa.put(k, v);
 		assertEquals(aa.get(k), v);
+		//assertEquals(new Integer(1),new Integer(aa.size()));
 	}
 	
+	@Test
+	public void test7(){
+		String k = "cuatro";
+		String v = "4";
+		aux = new ArrayAsociativo(keys,values);
+		int tam = aux.size();
+		aux.put(k, v);
+		assertEquals(tam+1, aux.size());
+	}
 	
 }
