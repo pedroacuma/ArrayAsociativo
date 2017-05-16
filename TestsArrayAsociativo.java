@@ -9,11 +9,16 @@ import org.junit.Test;
 
 public class TestsArrayAsociativo {
 
-	ArrayAsociativo aa;
+	private ArrayAsociativo aa;
+	private	String[] keys =  {"uno","dos","tres"};
+	private String[] values = {"1","2","3"};
+	private ArrayAsociativo aux;
+
 	
 	@After
 	public void finish(){
 		aa = null;
+		aux = null;
 	}
 	
 	@Test
@@ -24,10 +29,8 @@ public class TestsArrayAsociativo {
 	
 	@Test
 	public void test2(){
-		String[] keys =  {"uno","dos","tres"};
-		String[] values = {"1","2","3"};
- 		aa = new ArrayAsociativo(keys,values);
- 		assertEquals(new Integer(keys.length),new Integer(aa.size()));
+		aux = new ArrayAsociativo(keys,values);
+ 		assertEquals(new Integer(keys.length),new Integer(aux.size()));
 	}
 
 	@Test(expected = NoSuchElementException.class)
@@ -37,7 +40,14 @@ public class TestsArrayAsociativo {
 		aa.get(key);
 	}
 	
-	
+	@Test
+	public void test4(){
+		aux = new ArrayAsociativo(keys,values);
+		String kToFind = "dos";
+		String value = "2";
+		String found = aux.get(kToFind);
+		assertEquals(value,found);
+	}
 	
 	
 }
