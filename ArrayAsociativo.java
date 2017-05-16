@@ -15,7 +15,7 @@ public class ArrayAsociativo {
 	}
 	
 	//Variables de instancia
-	private Nodo primero;
+	private  Nodo primero;
 	
 	
 	//Constructores
@@ -35,4 +35,15 @@ public class ArrayAsociativo {
 	}
 	
 	//Métodos de instancia
+	
+	public int size(){
+		int size = 0;
+		Nodo current = primero;
+		while(current != null){
+			size++;
+			current = current.sig;
+		}
+		return size;
+	}
+	
 }
