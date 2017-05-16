@@ -49,5 +49,11 @@ public class TestsArrayAsociativo {
 		assertEquals(value,found);
 	}
 	
-	
+	@Test(expected = NoSuchElementException.class)
+	public void test5(){
+		aux = new ArrayAsociativo(keys,values);
+		String kToFind = "seis";
+		aux.get(kToFind);
+		
+	}
 }
