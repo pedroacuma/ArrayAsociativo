@@ -56,4 +56,16 @@ public class TestsArrayAsociativo {
 		aux.get(kToFind);
 		
 	}
+	
+	
+	@Test
+	public void test6(){
+		String k = "uno";
+		String v = "1";
+		aa = new ArrayAsociativo();
+		aa.put(k, v);
+		assertEquals(aa.get(k), v);
+	}
+	
+	
 }
