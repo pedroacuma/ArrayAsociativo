@@ -2,6 +2,8 @@ package prArrayAsociativo;
 
 import static org.junit.Assert.*;
 
+import java.util.NoSuchElementException;
+
 import org.junit.After;
 import org.junit.Test;
 
@@ -28,4 +30,14 @@ public class TestsArrayAsociativo {
  		assertEquals(new Integer(keys.length),new Integer(aa.size()));
 	}
 
+	@Test(expected = NoSuchElementException.class)
+	public void test3(){
+		String key = "uno";
+		aa = new ArrayAsociativo();
+		aa.get(key);
+	}
+	
+	
+	
+	
 }
