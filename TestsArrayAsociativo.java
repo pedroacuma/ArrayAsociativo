@@ -78,4 +78,14 @@ public class TestsArrayAsociativo {
 		assertEquals(tam+1, aux.size());
 	}
 	
+	@Test
+	public void test8(){
+		String k = "uno";
+		String v = "1";
+		aa = new ArrayAsociativo(keys,values);
+		aa.put(k, v);
+		assertEquals(aa.get(k),v);
+	}
+	
+	
 }
