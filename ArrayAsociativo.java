@@ -86,9 +86,23 @@ public class ArrayAsociativo {
 		if(current != null){
 			res = current.valor;
 		}
-		
 		return res;
 	}
+	
+	
+	public boolean containsKey(String clave){
+		Nodo current = primero;
+
+		while(current != null && !clave.equals(current.clave)){
+			current = current.sig;
+		}
+		
+		return current!=null;
+	}
+	
+	
+	
+	
 	
 	
 }
