@@ -76,6 +76,19 @@ public class ArrayAsociativo {
 	}
 	
 	
+	public String getOrElse(String clave, String valorPorDefecto){
+		String res = valorPorDefecto;
+		Nodo current = primero;
+		
+		while(current != null && !clave.equals(current.clave)){
+			current = current.sig;
+		}
+		if(current != null){
+			res = current.valor;
+		}
+		
+		return res;
+	}
 	
 	
 }
