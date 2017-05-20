@@ -101,7 +101,26 @@ public class ArrayAsociativo {
 	}
 	
 	
-	
+	public boolean remove(String clave){
+		boolean res;
+		
+		Nodo current = primero;
+		Nodo prev = null;
+
+		while(current != null && !clave.equals(current.clave)){
+			prev = current;
+			current = current.sig;
+		}
+		
+		if(current != null){
+			prev.sig = current.sig;
+			res = true;
+		} else{
+			res = false;
+		}
+		
+		return res;
+	}
 	
 	
 	
