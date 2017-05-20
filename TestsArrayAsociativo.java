@@ -144,5 +144,15 @@ public class TestsArrayAsociativo {
 	}
 	
 	
+	@Test
+	public void test15(){
+		aa = new ArrayAsociativo();
+		String k= "uno";
+		assertTrue(aa.remove(k));
+	}
+	
+	
+	
+	
 	
 }
