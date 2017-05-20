@@ -148,7 +148,7 @@ public class TestsArrayAsociativo {
 	public void test15(){
 		aa = new ArrayAsociativo();
 		String k= "uno";
-		assertTrue(aa.remove(k));
+		assertFalse(aa.remove(k));
 	}
 	
 	
@@ -159,5 +159,11 @@ public class TestsArrayAsociativo {
 		assertTrue(aa.remove(k));
 	}
 	
+	@Test
+	public void test17(){
+		aa = new ArrayAsociativo(keys,values);
+		String k = "cuatro";
+		assertFalse(aa.remove(k));
+	}
 	
 }

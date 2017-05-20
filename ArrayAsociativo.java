@@ -107,10 +107,6 @@ public class ArrayAsociativo {
 		Nodo current = primero;
 		Nodo prev = null;
 		
-		if(primero == null){
-			return true;
-		}
-
 		while(current != null && !clave.equals(current.clave)){
 			prev = current;
 			current = current.sig;
