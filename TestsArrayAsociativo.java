@@ -134,4 +134,15 @@ public class TestsArrayAsociativo {
 		String k = "cuatro";
 		assertFalse(aa.containsKey(k));
 	}
+	
+	
+	@Test
+	public void test14(){
+		aa = new ArrayAsociativo(keys,values);
+		String k = "uno";
+		assertTrue(aa.containsKey(k));
+	}
+	
+	
+	
 }
