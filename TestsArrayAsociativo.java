@@ -98,4 +98,15 @@ public class TestsArrayAsociativo {
 		assertEquals(def,res);
 	}
 	
+	
+	@Test 
+	public void test10(){
+		aa = new ArrayAsociativo(keys,values);
+		String key = "uno";
+		String def = "Default";
+		String res;
+		res = aa.getOrElse(key,def);
+		assertEquals(res,aa.get(key));
+	}
+	
 }
