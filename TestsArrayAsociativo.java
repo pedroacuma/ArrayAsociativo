@@ -152,7 +152,12 @@ public class TestsArrayAsociativo {
 	}
 	
 	
-	
+	@Test
+	public void test16(){
+		aa = new ArrayAsociativo(keys,values);
+		String k = "uno";
+		assertTrue(aa.remove(k));
+	}
 	
 	
 }
