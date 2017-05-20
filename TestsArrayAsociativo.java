@@ -109,4 +109,14 @@ public class TestsArrayAsociativo {
 		assertEquals(res,aa.get(key));
 	}
 	
+	
+	@Test
+	public void test11(){
+		aa = new ArrayAsociativo(keys,values);
+		String key = "cuatro";
+		String def = "Default";
+		String res;
+		res = aa.getOrElse(key,def);
+		assertEquals(def,res);
+	}
 }
