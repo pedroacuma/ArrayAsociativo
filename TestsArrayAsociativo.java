@@ -120,4 +120,11 @@ public class TestsArrayAsociativo {
 		assertEquals(def,res);
 	}
 	
+	
+	@Test
+	public void test12(){
+		aa = new ArrayAsociativo();
+		String k = "uno";
+		assertFalse(aa.containsKey(k));
+	}
 }
